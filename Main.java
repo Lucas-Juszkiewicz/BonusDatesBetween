@@ -85,8 +85,11 @@ public class Main {
 
         for(int i=0; i < yearsBetween.length; i++){
             int year = yearsBetween[i];
-                if(year>=1001 && year<=9999){
+                if(year>=101 && year<=9999){
                     String yearStr = Integer.toString(year);
+                    if(year>=101 && year<=999){
+                        yearStr = "0" + yearStr;
+                    }
                     String monthAndDay = "";
                         for(int j = 3; j >= 0; j--){
                             if(j == 1){
@@ -127,9 +130,14 @@ public class Main {
 
     // Function to print palindrome dates
     public static void printBonusDatesBetween(int fromYear, int toYear){
-        
+
                 int[] yearsBetween = giveYearsBetween(fromYear, toYear);
                 List<LocalDate> palindromeDates = givePalindromeDates(yearsBetween);
+
+                if(palindromeDates.isEmpty()){
+                    System.out.println("\nThere are no dates between the years from " + fromYear + 
+                    " to " + toYear + " which are written in the format (yyyy-MM-dd) and are palindromes.");
+                }
 
                 for (LocalDate palindromeDate : palindromeDates) {
                     System.out.print("\n" + palindromeDate);
