@@ -27,6 +27,8 @@ Suppose you enter a date range of 2000 to 2025. The program will find and displa
 ## Notes
 
 - The program considers palindrome dates in the format "yyyy-MM-dd."
+- If the year is presented as a three-digit number, then a zero is added at the beginning. For example, the year 111 is treated  
+  as 0111 and a palindrome is created based on this digit.
 
 ## License
 
