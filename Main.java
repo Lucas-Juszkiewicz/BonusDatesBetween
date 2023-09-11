@@ -119,7 +119,7 @@ public class Main {
                     }
                 }else {
                     continue; 
-                    // Ignore years outside the range 1001-9999,
+                    // Ignore years outside the range 101-9999,
                     // because you can't make a palindrome out of them.
                 }
         }
